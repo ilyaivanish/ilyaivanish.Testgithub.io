@@ -28,7 +28,15 @@ const startApp = () => {
         renderList(tasksList);
     };
 
+    // adding new task
     const onSubmit = (newTask) => {
+
+        // error if task are empty
+        if (newTask.trim() === '') {
+            alert('Task field can\'t be empty!');
+            return;
+        }
+        
         tasksList.push({
             name: newTask,
             completed: false,
@@ -38,17 +46,20 @@ const startApp = () => {
 
     formListener(onSubmit);
 
+
+    // delete task via cross button
     listClickListener((index) => {
         tasksList.splice(index, 1);
         updateList();
     });
 
+    // filtering tasks by name
     formChangeListener((text) => {
         const filteredTasks = tasksList.filter(byName(text));
         renderList(filteredTasks);
     });
 
-    // Delete all completed tasks
+    // delete all completed tasks
     const deleteCompletedBtn = document.querySelector('#deleteCompletedBtn');
     deleteCompletedBtn.addEventListener('click', () => {
       const filteredList = tasksList.filter(task => !task.completed);
