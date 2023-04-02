@@ -8,14 +8,9 @@ import { listClickListener } from './listClickListener.js';
 import { formChangeListener } from './formChangeListener.js';
 import { byName } from './filters.js';
 
-
-// Create a new task
-    // by clicking on the button
-    // by pressing enter
-// Delete a task
-// Search tasks by name
-// Mark a task as completed (2/2)
-// Delete all completed tasks
+const allRadioBtn = document.querySelector('#allRadioBtn');
+const completedRadioBtn = document.querySelector('#completedRadioBtn');
+const notCompletedRadioBtn = document.querySelector('#notCompletedRadioBtn');
 
 const startApp = () => {
 
@@ -65,6 +60,21 @@ const startApp = () => {
       const filteredList = tasksList.filter(task => !task.completed);
       tasksList = filteredList; 
       updateList()
+    });
+
+    // logic of task filtering
+    allRadioBtn.addEventListener('change', () => {
+    renderList(tasksList);
+    });
+
+    completedRadioBtn.addEventListener('change', () => {
+    const completedTasks = tasksList.filter(task => task.completed);
+    renderList(completedTasks);
+    });
+
+    notCompletedRadioBtn.addEventListener('change', () => {
+    const notCompletedTasks = tasksList.filter(task => !task.completed);
+    renderList(notCompletedTasks);
     });
 
 };

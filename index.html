@@ -26,6 +26,19 @@
                                 <button class="add btn btn-primary font-weight-bold todo-list-add-btn" type="submit">Add</button>
                             </div>
                         </form>
+                        
+                        <div class="radio-container">
+
+                            <input type="radio" name="filter" id="allRadioBtn" checked>
+                            <label for="allRadioBtn">All tasks</label>
+                            
+                            <input type="radio" name="filter" id="completedRadioBtn">
+                            <label for="completedRadioBtn">Completed</label>
+                            
+                            <input type="radio" name="filter" id="notCompletedRadioBtn">
+                            <label for="notCompletedRadioBtn">Not completed</label>
+                            
+                            </div>
 
                         <div class="list-wrapper">
                             <ul class="d-flex flex-column-reverse todo-list" id="list">

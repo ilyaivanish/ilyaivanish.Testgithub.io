@@ -12,6 +12,36 @@ body {
     margin: 10px 10px 20px 10px;
 }
 
+.radio-container {
+    display: flex;
+    justify-content: center;  
+}
+
+.radio-container label {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 50px;
+    padding: 5px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.radio-container label {
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+  
+.radio-container input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
 @media (max-width: 991.98px) {
     .padding {
         padding: 1.5rem
