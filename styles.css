@@ -13,7 +13,9 @@ body {
 }
 
 .radio-container {
-    margin-left: 150px;
+  display: flex;
+  justify-content: center;
+
 }
 
 .radio-container label {

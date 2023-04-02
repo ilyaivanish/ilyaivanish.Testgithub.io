@@ -12,14 +12,6 @@ const allRadioBtn = document.querySelector('#allRadioBtn');
 const completedRadioBtn = document.querySelector('#completedRadioBtn');
 const notCompletedRadioBtn = document.querySelector('#notCompletedRadioBtn');
 
-// Create a new task
-    // by clicking on the button
-    // by pressing enter
-// Delete a task
-// Search tasks by name
-// Mark a task as completed (2/2)
-// Delete all completed tasks
-
 const startApp = () => {
 
     let tasksList = loadList();
