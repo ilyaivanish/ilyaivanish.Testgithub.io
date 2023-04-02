@@ -30,7 +30,7 @@ export const renderList = (tasksList) => {
             }
         });
 
-        // save completion
+        // save completion of task
         const checkbox = taskElement.querySelector('.checkbox');
             checkbox.addEventListener('change', () => {
                 const completed = checkbox.checked;
