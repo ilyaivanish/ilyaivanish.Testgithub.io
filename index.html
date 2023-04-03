@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript v3</title>
+    <title>Illia Ivanyshyn ToDoApp</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -18,17 +18,17 @@
             <div class="col-md-12">
                 <div class="card px-3">
                     <div class="card-body">
+
                         <h4 class="card-title">Awesome Todo list</h4>
+                        
                         <form id="form">
                             <div class="add-items d-flex">
-                                <input type="text" class="form-control todo-list-input"
-                                       placeholder="What do you need to do today?" id="input-text">
+                                <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?" id="input-text">
                                 <button class="add btn btn-primary font-weight-bold todo-list-add-btn" type="submit">Add</button>
                             </div>
                         </form>
                         
                         <div class="radio-container">
-
                             <input type="radio" name="filter" id="allRadioBtn" checked>
                             <label for="allRadioBtn">All tasks</label>
                             
@@ -37,15 +37,17 @@
                             
                             <input type="radio" name="filter" id="notCompletedRadioBtn">
                             <label for="notCompletedRadioBtn">Not completed</label>
-                            
-                            </div>
+                        </div>
 
                         <div class="list-wrapper">
                             <ul class="d-flex flex-column-reverse todo-list" id="list">
                             </ul>
                         </div>
+
                     </div>
+                    
                     <button id="deleteCompletedBtn" class="btn btn-danger">Delete Completed Tasks</button>
+
                 </div>
             </div>
         </div>

@@ -14,6 +14,7 @@ const notCompletedRadioBtn = document.querySelector('#notCompletedRadioBtn');
 
 const startApp = () => {
 
+    // Load tasks from local storage
     let tasksList = loadList();
     
     renderList(tasksList);
