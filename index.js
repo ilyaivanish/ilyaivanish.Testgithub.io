@@ -1,16 +1,12 @@
 `use strict`;
 
-
 import { renderList } from './renderList.js';
 import { formListener } from './formListener.js';
 import { saveList, loadList } from './ls.js';
 import { listClickListener } from './listClickListener.js';
 import { formChangeListener } from './formChangeListener.js';
-import { byName } from './filters.js';
+import { byName, allRadioBtn, completedRadioBtn, notCompletedRadioBtn } from './filters.js';
 
-const allRadioBtn = document.querySelector('#allRadioBtn');
-const completedRadioBtn = document.querySelector('#completedRadioBtn');
-const notCompletedRadioBtn = document.querySelector('#notCompletedRadioBtn');
 
 const startApp = () => {
 
