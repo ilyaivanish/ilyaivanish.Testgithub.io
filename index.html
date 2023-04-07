@@ -1,59 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoApp Illia Ivanyshyn</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="page-content page-container" id="page-content">
-    <div class="padding">
-        <div class="row container d-flex justify-content-center">
-            <div class="col-md-12">
-                <div class="card px-3">
-                    <div class="card-body">
+    <title>Date Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-                        <h4 class="card-title">Awesome Todo list</h4>
-                        
-                        <form id="form">
-                            <div class="add-items d-flex">
-                                <input type="text" class="form-control todo-list-input" placeholder="What do you need to do today?" id="input-text">
-                                <button class="add btn btn-primary font-weight-bold todo-list-add-btn" type="submit">Add</button>
-                            </div>
-                        </form>
-                        
-                        <div class="radio-container">
-                            <input type="radio" name="filter" id="allRadioBtn" checked>
-                            <label for="allRadioBtn">All tasks</label>
-                            
-                            <input type="radio" name="filter" id="completedRadioBtn">
-                            <label for="completedRadioBtn">Completed</label>
-                            
-                            <input type="radio" name="filter" id="notCompletedRadioBtn">
-                            <label for="notCompletedRadioBtn">Not completed</label>
-                        </div>
+    <div class="container">
+      <h1>Time Measure</h1>
 
-                        <div class="list-wrapper">
-                            <ul class="d-flex flex-column-reverse todo-list" id="list">
-                            </ul>
-                        </div>
 
-                    </div>
-                    
-                    <button id="deleteCompletedBtn" class="btn btn-danger">Delete Completed Tasks</button>
+      <div class="input-wrapper">
+        <label for="start-date">Start Date:</label>
+        <input type="date" id="start-date" name="start-date">
+        <button id="today-btn">Today</button>
+      </div>
 
-                </div>
-            </div>
-        </div>
+      <div class="input-wrapper">
+        <label for="end-date">End Date:</label>
+        <input type="date" id="end-date" name="end-date" disabled>
+        <button class="presets-buttons" id="preset-week-btn" disabled>1 Week</button>
+        <button class="presets-buttons" id="preset-month-btn" disabled>1 Month</button>
+      </div>
+
+      <div class="radio-container" id="dayTypesOptions">
+        <h4>Which day types need to calculate?</h4>
+
+        <input type="radio" class="radio-buttons" name="filterdayTypes" id="allDays" checked disabled>
+        <label for="allDays">All days</label>
+        
+        <input type="radio" class="radio-buttons" name="filterdayTypes" id="workingDays" disabled>
+        <label for="workingDays">Working days</label>
+        
+        <input type="radio" class="radio-buttons" name="filterdayTypes" id="weekends" disabled>
+        <label for="weekends">Weekends</label>
+      </div>
+
+      <div class="radio-container" id="countOptions">
+        <h4>What need to calculate?</h4>
+
+        <input type="radio" class="radio-buttons" name="filter" id="days" checked disabled>
+        <label for="days">Days</label>
+        
+        <input type="radio" class="radio-buttons" name="filter" id="hours" disabled>
+        <label for="hours">Hours</label>
+        
+        <input type="radio" class="radio-buttons" name="filter" id="minutes" disabled>
+        <label for="minutes">Minutes</label>
+
+        <input type="radio" class="radio-buttons" name="filter" id="seconds" disabled>
+        <label for="seconds">Seconds</label>
+      </div>
+
+      <button class="calculate-btn" id="calculate-btn" disabled>Calculate</button>
+
     </div>
-</div>
 
-<script src="index.js" type="module"></script>
-</body>
+    <div class="table-container">
+      <table class="results-table" id="results-table">
+        <thead>
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+      <div class="delete-btn-container">
+        <button class="delete-data-btn" id="delete-data-btn">Delete saved data</button>
+      </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
